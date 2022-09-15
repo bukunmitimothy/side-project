@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        :root{
+            --clr: black;
+        }
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(./pic/Koala.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* gap: 50vh; */
+            height: 100vh;
+            width: 100vh;
+        }
+        .button{
+            text-decoration: none;
+            /* display: block; */
+            padding: 50px 90px;
+            color: whitesmoke;
+            background-color: var(--clr);
+            border-radius: 8px;
+            letter-spacing: 2px;
+            margin-left: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0px 14px 22px -7px rgba(0, 0, 0, .4);
+            transition: background-color 0.2s;
+        }
+        .button:hover{
+            animation: swing 3s;
+            text-transform: lowercase;
+            color: black;
+            background-color: #ff03de;
+
+        }
+        @keyframes swing{
+            0%{
+                transform: rotateZ(0deg) translate(0,0);
+            }
+        
+            20%{
+                transform: rotateZ(20deg) translate(15px,-5px);
+            }
+        
+            40%{
+                transform: rotateZ(-10deg) translate(-15px,2px);
+            }
+            60%{
+                transform: rotateZ(11deg) translate(10px,-1px);
+            }
+            80%{
+                transform: rotateZ(0deg) translate(0,0);
+            }
+        }
+        .btn{
+            /* margin-left: 0px; */
+            border: solid 1px whitesmoke;
+            position: relative;
+            height: 50px;
+            width: 120px;
+            background-color: black;
+            color: whitesmoke;
+            outline: none;
+            overflow: hidden;
+
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            width: 5px;
+            background: whitesmoke;
+            left: -5px;
+            top: 0;
+            bottom: 0;
+        }
+        .btn:hover:before{
+            left: calc(100% + 30px);
+            transition: left 500ms;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="button">Button</a>
+    <button class="btn">hover me button</button>
+</body>
+</html>

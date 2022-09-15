@@ -1,0 +1,185 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 100%;
+}
+title{
+    color: red;
+}
+body{ /*the body css i only need it for the background*/
+    background-color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+/* now for the header and for body2 #new arrivals */
+header, .body2{
+    width: 100%;
+    height: 100%;
+    gap: 25vh;
+    display: flexbox;
+    font-size: medium;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(102, 100, 100, .5);
+}
+/* the image i used for the logo */
+.mage{
+    border-radius: 50px;
+}
+.nav-bar{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.nav-bar h2{
+    color: black;
+    text-transform: uppercase;
+    padding: 5px;
+    font-size: 25px;
+}
+.nav-bar h2 span{
+    color: tomato;
+}
+/* -this is is the nav selection  */
+.list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    font-weight: bold;
+    /* padding-left: 50px; */
+    gap: 15vh;
+}
+.list-item li{
+    text-decoration: none;
+    list-style: none;
+    white-space: 25px;
+    /* padding-left: 55px; */
+}
+.list-item li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.list-item li a:hover{
+    color: tomato;
+    transform: translateX(5px);
+}
+/* the bootstrap icon */
+.nav-bar .icon1{
+    gap: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-bar .icon1 a{
+    color: black;
+    cursor: default;
+    /* padding-left: 12px; */
+}
+.header2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40vh;
+}
+/* for the search box selection */
+/* .search1{
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2vh;
+    height: 100%;
+}
+input{
+    /* width:  50%; */
+    /* padding: auto;
+    /* margin: auto; */
+    /* padding: 12px;
+    border: none;
+    margin: 12px;
+    background-color: rgba(102, 100, 100, .5);
+}
+.input1{
+    width: 50%;
+    
+}
+.selction{
+    color: tomato;
+} */ 
+/* this is the body ::selection */
+h3{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.body1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5vh;
+}
+
+/* the reason why you should do business with us */
+.big{
+    /* color: tomato; */
+    font-size: 45px;
+}
+.box{
+    height: 100%;
+    padding: 12px 12px 0px 12px;
+    background-color: rgba(9, 3, 31, 0.8);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    color: aliceblue;
+    flex-direction: column;
+}
+/* this for the new arrivals selection */
+.body2{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50vh;
+}
+/* for all our product */
+.body3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* height: 100vh;
+    width: 50%; */
+    flex-direction: column;
+}
+.boxs1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 12vh;
+}
+.boxs{
+    background-color: rgba(100, 100, 100, .5);
+    height: 40vh;
+    width: 50vh;
+}
+/* the comment selction */
+.search{
+    background-color: rgb(241, 28, 28);
+    height: 10vh;
+    width: 100%;
+    margin-top: 12px;
+}

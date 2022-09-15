@@ -1,0 +1,40 @@
+/* the media querriers fot the index.html */
+/* this is for small phone */
+@media screen and (max-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+    .body3{
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .boxs1{
+        display: inline-block;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 12vh;
+    }
+  }
+
+/* this is for a larger screen and a tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+      background-color: lightgreen;
+    }
+    .boxs1{
+        /* display: inline-block; */
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 12vh;
+    }
+  }
+  /* this for laptop and for a tablet in landsczape */\
+  @media screen and (max-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  }

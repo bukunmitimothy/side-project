@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button light</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-style: normal;
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gold;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+
+        }
+        .button-title{
+            position: relative;
+            z-index:1;
+            text-transform: capitalize;
+            color: black;
+        }
+        .button{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            z-index: 5;
+            position: relative;
+            padding: 11px 100px;
+            letter-spacing: 3px;
+            font-size: 30px;
+        }
+        .button::before{
+            content: "";
+            /* justify-content: center; */
+            position: absolute;
+            left: 5;
+            top: 0;
+            display: block;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, .6);
+            border:5px solid rgba(255, 255, 255, .6);
+            backdrop-filter: blur(2px);
+            border-radius: 95px 8px;
+        }
+        .button::after{
+            content: "";
+            /* justify-content: center; */
+            position: absolute;
+            left: 5;
+            top: 0;
+            display: block;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: linear-gradient(90deg, red, green);
+            border: 5px solid transparent;
+            filter: blur(12px);
+            border-radius: 95px 8px;
+            transition: opacity 0.4s linear;
+        }
+        .button:hover::after{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+     <a href="#" class="button">
+        <h1 class="button-title">
+            button
+        </h1>
+     </a>
+</body>
+</html>

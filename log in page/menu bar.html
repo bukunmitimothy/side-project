@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu bar with flexbox</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        .hero{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(./pic/Koala.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        nav{
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            padding-top: 40px;
+            padding-left: 5%;
+            padding-right: 5%;
+            position: static;
+        }
+        .logo{
+            color: whitesmoke;
+            text-transform: capitalize;
+            font-size: 28px;
+        }
+        span{
+            color: tomato;
+        }
+        
+        ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 10px 20px;
+        }
+        ul li a{
+            color: whitesmoke;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        ul li a:hover{
+            color: tomato;
+            transition: .3s;
+        }
+        button{
+            border: none;
+            background: tomato;
+            padding: 6px;
+            border-radius: 15px;
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 15px;
+            transition: .4s;
+
+        }
+        button:hover{
+            transform: scale(1.3);
+            cursor: pointer;
+
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        .main h1{
+            color: whitesmoke;
+            font-weight: bolder;
+            /* font-size: 70px; */
+        }
+        .main p{
+            color: tomato;
+            text-transform: capitalize;
+            font-weight: lighter;
+            font-size: 12px;
+        }
+        .hero2{
+
+            height: 100vh;
+            /* width: 100%; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .about{
+            display: flex;
+            flex-direction: row;
+             align-items: center;
+             justify-content: center;
+             gap: 40vh;
+             height: 100vh;
+             padding: 50px; 
+             background-color: azure;
+        }
+        img, .img{
+            width: 50vh;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero" id="home">
+        <nav>
+            <h2 class="logo">Bukunmi <span>timothy</span></h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <button type="button"> download c.v</button>
+        </nav>
+        <div class="main">
+            <h1>ALABI BUKUNMI TIMOTHY</h1>
+            <P>am a frontend develope / Graphic designer and a python programmer</P>
+        </div>
+    </header>
+    <section class="hero2" id="about">
+        <div class="about">
+            <div class="about">
+                <p class="img">
+                hello,<br>i'm <span >Alabi Bukunmi Timothy</span><br>
+                a frontend developer <span class="logo p_name">/</span> python programmer <span class="logo">/</span> Graphic design.<br>
+                from Nigeria. 
+                </p>
+                <div>
+                    <img src="./pic/my.png" alt="my pic">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        
+    </footer>
+</body>
+</html>

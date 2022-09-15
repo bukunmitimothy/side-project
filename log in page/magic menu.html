@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap-icons/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css" type="css/text"> -->
+    <title>magic navigation menu</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            /* font-weight: bold; */
+            box-sizing: border-box;
+        }
+        :root{
+            --clr: #191c19;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(./pic/Koala.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        nav{
+            width: 400px;
+            height: 110px;
+            background: whitesmoke;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        nav ul{
+            display: flex;
+            width: 350px;
+        }
+        nav ul li{
+            position: relative;
+            list-style: none;
+            text-decoration: none;
+            width: 70px;
+            height: 70px;
+            z-index: 1;
+        }
+        nav ul li a{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav ul li a .icon{
+            display: block;
+            position: relative;
+            line-height: 75px;
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: bolder;
+            transition: 0.5s;
+            color: var(--clr);
+        }
+        nav ul li.active a .icon{
+            transform: translatey(-40px);
+        }
+        nav ul li a .text{
+            position: absolute;
+            color: var(--clr);
+            font-weight: 700;
+            font-size: 0.75em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        nav ul li.active a .text{
+            opacity: 1;
+            transform: translateY(10px);
+        }
+        /* .indicator{
+            position: absolute;
+            top: -50%;
+            left: 9%; */
+            /* right: -50px;
+            width: 70px;
+            height: 70px;
+            background: lime;
+            border-radius: 50%;
+            border: 6px solid var(--clr);
+            transition: 0.5s;
+        } */
+        /* .indicator::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -13px;
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            border-top-right-radius: 10px;
+            box-shadow: 1px -4px 0 0 var(--clr);
+        }
+        .indicator::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -12px;
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            border-top-left-radius: 10px;
+            box-shadow: -1px -5px 0 0 var(--clr);
+        } */
+        nav ul li:nth-child(1).active ~ .indicator{
+            transform: translateX(calc(70px * 0));
+        }
+        nav ul li:nth-child(2).active ~ .indicator{
+            transform: translateX(calc(70 * 1));
+        }
+        nav ul li:nth-child(3).active ~ .indicator{
+            transform: translateX(calc(70 * 2));
+        }
+        nav ul li:nth-child(4).active ~ .indicator{
+            transform: translateX(calc(70 * 3));
+        }
+        nav ul li:nth-child(5).active ~ .indicator{
+            transform: translateX(calc(70 * 4));
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-house"></i></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                    <span class="text">profile</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-envelope-fill"></i></span>
+                    <span class="text">Message</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-images"></i></span>
+                    <span class="text">photo</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-mailbox"></i></span>
+                    <span class="text">email</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </nav>
+    <script >
+        const list = document.querySelectorAll('.list');
+        function activelink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click' ,activelink))
+    </script>
+</body>
+</html>
